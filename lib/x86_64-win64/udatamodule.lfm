@@ -1,0 +1,20 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 330
+  HorizontalOffset = 555
+  VerticalOffset = 315
+  Width = 538
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\Users\user\Documents\SISTEMAS\LAZARUS\BANCO\SAGA2000D.FDB'
+    KeepConnection = False
+    Password = 'masterkey'
+    UserName = 'SYSDBA'
+    HostName = 'localhost'
+    CheckTransactionParams = False
+    UseConnectionCharSetIfNone = False
+    Left = 48
+    Top = 24
+  end
+end

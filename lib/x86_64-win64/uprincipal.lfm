@@ -1,0 +1,137 @@
+object form_principal: Tform_principal
+  Left = 486
+  Height = 517
+  Top = 170
+  Width = 820
+  BorderIcons = [biSystemMenu, biHelp]
+  Caption = 'Formulário Principal'
+  ClientHeight = 497
+  ClientWidth = 820
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object statusbar_info: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 0
+    Width = 820
+    Align = alTop
+    Panels = <    
+      item
+        Width = 50
+      end    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object MainMenu1: TMainMenu
+    Left = 114
+    Top = 62
+    object MenuItem1: TMenuItem
+      Caption = 'Sistema'
+      object mnuCadastros: TMenuItem
+        Caption = 'Cadastros'
+        object mnuEnderecos: TMenuItem
+          Caption = 'Endereços'
+          object mnuManutencaoDePais: TMenuItem
+            Caption = 'Manutenção de Pais'
+          end
+          object mnuManutencaoEstados: TMenuItem
+            Caption = 'Manutenção de Estados'
+          end
+          object mnuManutencaoDeCidades: TMenuItem
+            Caption = 'Manutenção de Cidades'
+          end
+          object mnuManutencaoDeBairros: TMenuItem
+            Caption = 'Mantenção de Bairros'
+          end
+          object mnuManutencaoRegiaoRotas: TMenuItem
+            Caption = 'Manutenção de Região/Rotas'
+            object mnuManutencaoDeRegiao: TMenuItem
+              Caption = 'Manutenção de Região'
+            end
+            object mnuManutencaoRotas: TMenuItem
+              Caption = 'Manutenção de Rotas'
+            end
+            object mnuManutencaoDePontosDeRotas: TMenuItem
+              Caption = 'Manutenção de Ponto de Rotas'
+            end
+            object mnuManutencaoPontosDeRotasEFuncionarios: TMenuItem
+              Caption = 'Manuteção de Pontos de Rotas/Funcionários'
+            end
+          end
+        end
+        object MenuItem13: TMenuItem
+          Caption = 'Conta Corrente'
+          object MenuItem14: TMenuItem
+            Caption = 'Histórico Padrão de CC'
+          end
+          object MenuItem15: TMenuItem
+            Caption = 'Tipo de Lançamento CC'
+          end
+        end
+        object MenuItem16: TMenuItem
+          Caption = 'Manutenção de indice - Curva ABC'
+        end
+        object MenuItem17: TMenuItem
+          Caption = 'Manutenção de Observações'
+        end
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object mnuManutencaoDeGrupos: TMenuItem
+        Caption = 'Manutenção de Grupos'
+      end
+      object mnuManutencaoDeUusuarios: TMenuItem
+        Caption = 'Manutenção de Usuários'
+      end
+      object mnuManutencaoDeAcessoDeUusuario: TMenuItem
+        Caption = 'Manutenção de Acesso do Usuário'
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object mnuAuditorias: TMenuItem
+        Caption = 'Auditorias'
+        object mnuAditoriaDePecas: TMenuItem
+          Caption = 'De Peças'
+        end
+        object mnuAditoriaDeEstoque: TMenuItem
+          Caption = 'De Estoques'
+        end
+        object mnuAditoriaDeVendas: TMenuItem
+          Caption = 'De Vendas'
+        end
+        object mnuAditoriaDeContasAPagar: TMenuItem
+          Caption = 'De Contas a Pagar'
+        end
+        object mnuAditoriaDeContasAReceber: TMenuItem
+          Caption = 'De Contas a Receber'
+        end
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object mnuManutencaoEmpresas: TMenuItem
+        Caption = 'Manutenção de Empresas'
+      end
+      object mnuManutencaoParametros: TMenuItem
+        Caption = 'Manutenção de Parâmetros'
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object mnuTrocaDeEmpresa: TMenuItem
+        Caption = 'Troca de Empresa'
+      end
+      object N5: TMenuItem
+        Caption = '-'
+      end
+      object mnuSair: TMenuItem
+        Caption = 'Sair'
+      end
+    end
+  end
+end

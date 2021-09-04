@@ -17,13 +17,23 @@ atualizada, treinamento contínuo e ferramentas automatizadas. Uma combinação 
 
 # Algumas metas a serem cumpridas
 
-a) Definir tabelas, documentando a finalidade desta dentro do aplicativo; 
-b) Definir campos, com atributos como seu tamanho, valor máximo, mínimo, se é requerido, indexado, se será usado para localização e definir a função dele no sistema; 
-c) Definir algumas regras que vão futuramente automatizar a criação da aplicação final; 
-d) Definir regras de relacionamento entre as tabelas; 
-e) Definir o tipo de objeto que será atribuído ao campo para criação da interface final; 
-f) Definir os formulários de cadastros da aplicação, onde será possível definir a forma com o qual o registro será incrementado, o menu que ele se encaixara no sistema, as tabelas relacionadas com o formulário; 
-g) Documentar as alterações e correções que foram feitas em cada release do aplicativo; 
-h) Criar uma base de dados e um dicionário de dados com as definições inseridas na ferramenta 
 Usando as informações e regras definidas nesta ferramenta, um conjunto de objetos escritos em Lazarus interpretará estas informações, montando assim de maneira automatizada estes formulários, vinculando automaticamente a documentação, seguindo assim a recomendação de vários autores e especialistas relativo a solução técnica que as interfaces devem ser projetadas de acordo com padrões pré-definidos além da documentação ser distribuída também de acordo com padrões pré-definidos. 
+
+a) Definir tabelas, documentando a finalidade desta dentro do aplicativo; 
+
+b) Definir campos, com atributos como seu tamanho, valor máximo, mínimo, se é requerido, indexado, se será usado para localização e definir a função dele no sistema; 
+
+c) Definir algumas regras que vão futuramente automatizar a criação da aplicação final; 
+
+d) Definir regras de relacionamento entre as tabelas; 
+
+e) Definir o tipo de objeto que será atribuído ao campo para criação da interface final; 
+
+f) Definir os formulários de cadastros da aplicação, onde será possível definir a forma com o qual o registro será incrementado, o menu que ele se encaixara no sistema, as tabelas relacionadas com o formulário; 
+
+g) Documentar as alterações e correções que foram feitas em cada release do aplicativo; 
+
+h) Criar uma base de dados e um dicionário de dados com as definições inseridas na ferramenta 
+
+
 

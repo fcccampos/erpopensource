@@ -21,6 +21,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPrincipal"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="52"/>
         <CursorPos X="119" Y="73"/>
@@ -42,7 +43,6 @@
         <Filename Value="udatamodule.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DM"/>
-        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uDataModule"/>
         <EditorIndex Value="-1"/>
@@ -90,8 +90,8 @@
       </Unit8>
       <Unit9>
         <Filename Value="C:\lazarus\fpc\3.2.0\source\packages\chm\src\chmreader.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
         <TopLine Value="65"/>
         <CursorPos X="12" Y="81"/>
         <UsageCount Value="10"/>

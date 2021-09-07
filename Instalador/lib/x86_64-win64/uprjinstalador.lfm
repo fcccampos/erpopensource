@@ -1,0 +1,133 @@
+object frmInstaladorSistema: TfrmInstaladorSistema
+  Left = 393
+  Height = 744
+  Top = 128
+  Width = 1117
+  Caption = 'Instalador do Sistema'
+  ClientHeight = 744
+  ClientWidth = 1117
+  LCLVersion = '2.0.12.0'
+  object memoFirebird: TMemo
+    Left = 0
+    Height = 120
+    Top = 0
+    Width = 1117
+    Align = alTop
+    Lines.Strings = (
+      'Script de Criação de Tabelas - FIREBIRD'
+    )
+    TabOrder = 0
+  end
+  object memoMySQL: TMemo
+    Left = 0
+    Height = 144
+    Top = 120
+    Width = 1117
+    Align = alTop
+    Lines.Strings = (
+      'Script de Criação de Tabelas - MYSQL'
+    )
+    TabOrder = 1
+  end
+  object memoSQLite: TMemo
+    Left = 0
+    Height = 192
+    Top = 264
+    Width = 1117
+    Align = alTop
+    Lines.Strings = (
+      'Script de Criação de Tabelas - SQLite'
+      ''
+    )
+    TabOrder = 2
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 312
+    Top = 432
+    Width = 1117
+    ActivePage = TabSheet1
+    Align = alBottom
+    TabIndex = 0
+    TabOrder = 3
+    object TabSheet1: TTabSheet
+      Caption = 'Criação de Tabelas'
+      ClientHeight = 284
+      ClientWidth = 1109
+      object Label1: TLabel
+        Left = 8
+        Height = 15
+        Top = 8
+        Width = 85
+        Caption = 'Nome da Tabela'
+        ParentColor = False
+      end
+      object edtNomeTabela: TEdit
+        Left = 8
+        Height = 23
+        Hint = 'Máximo 15 Caracteres'
+        Top = 24
+        Width = 176
+        MaxLength = 15
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 8
+        Height = 15
+        Top = 64
+        Width = 335
+        Caption = 'A chave primária será criada automaticamente com o nome ''id'''
+        ParentColor = False
+      end
+      object StringGrid1: TStringGrid
+        Left = 8
+        Height = 176
+        Top = 88
+        Width = 448
+        TabOrder = 1
+        ColWidths = (
+          28
+          104
+          98
+          64
+          120
+        )
+        Cells = (
+          4
+          1
+          0
+          'Nome da Coluna'
+          2
+          0
+          'Tipo de Variável'
+          3
+          0
+          'Tamanho'
+          4
+          0
+          'Não Pode Ser Nulo'
+        )
+      end
+      object btnGerarScript: TButton
+        Left = 960
+        Height = 25
+        Top = 8
+        Width = 147
+        Caption = 'Gerar Script'
+        OnClick = btnGerarScriptClick
+        TabOrder = 2
+      end
+      object btnGerarScript1: TButton
+        Left = 962
+        Height = 25
+        Top = 36
+        Width = 147
+        Caption = 'Gerar arquivo txt'
+        OnClick = btnGerarScriptClick
+        TabOrder = 3
+      end
+    end
+  end
+end

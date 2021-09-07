@@ -14,9 +14,10 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
+  Application.Title:='Instalador do Sistema';
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmInstaladorSistema, frmInstaladorSistema);
   Application.Run;
 end.
 

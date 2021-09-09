@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  ComCtrls, Grids;
+  ComCtrls, Grids, Types;
 
 type
 
@@ -15,25 +15,30 @@ type
   TfrmInstaladorSistema = class(TForm)
     btnGerarScript: TButton;
     btnGerarScript1: TButton;
-    cmbVariavel: TComboBox;
-    edttamanho: TEdit;
-    edtcampo: TEdit;
+    Button1: TButton;
+    chkNulo01: TCheckBox;
+    cmbVariavel01: TComboBox;
+    edtcampo01: TEdit;
+    edtDecimal01: TEdit;
     edtNomeTabela: TEdit;
-    edtDecimal: TEdit;
+    edtquantidadecampos: TEdit;
+    edttamanho01: TEdit;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
+    Label7: TLabel;
+    lblCampo01: TLabel;
+    lblDecimal01: TLabel;
+    lblTamanho01: TLabel;
+    lblVariavel01: TLabel;
     memoFirebird: TMemo;
     memoMySQL: TMemo;
     memoSQLite: TMemo;
     PageControl1: TPageControl;
-    rdNulo: TRadioButton;
+    PageControl2: TPageControl;
     TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
     procedure btnGerarScriptClick(Sender: TObject);
-    procedure TabControl1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
 
   public
@@ -48,11 +53,6 @@ implementation
 {$R *.lfm}
 
 { TfrmInstaladorSistema }
-
-procedure TfrmInstaladorSistema.TabControl1Change(Sender: TObject);
-begin
-
-end;
 
 procedure TfrmInstaladorSistema.btnGerarScriptClick(Sender: TObject);
 var
@@ -73,6 +73,25 @@ begin
     memoFirebird.Lines.Add(gerastring);
   end;
 end;
+
+procedure TfrmInstaladorSistema.Button1Click(Sender: TObject);
+var
+  EditCampoTempoReal : TEdit;
+begin
+  // Gerando campos em tempo de execução
+  EditCampoTempoReal := TEdit.Create(nil);
+  EditCampoTempoReal.Parent := TabSheet1;
+  EditCampoTempoReal.Height := 23;
+  EditCampoTempoReal.Width := 192;
+  EditCampoTempoReal.Top := 155;
+  EditCampoTempoReal.Left := 20;
+  EditCampoTempoReal.Name := 'edtCampo02';
+  EditCampoTempoReal.Caption := '';
+  EditCampoTempoReal.CharCase := ecLowerCase;
+  EditCampoTempoReal.MaxLength := 20;
+  EditCampoTempoReal.TabOrder := 3;
+end;
+
 
 end.
 

@@ -76,39 +76,17 @@ object frmInstaladorSistema: TfrmInstaladorSistema
       object Label2: TLabel
         Left = 8
         Height = 15
-        Top = 64
+        Top = 56
         Width = 335
         Caption = 'A chave primária será criada automaticamente com o nome ''id'''
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
         ParentColor = False
-      end
-      object StringGrid1: TStringGrid
-        Left = 8
-        Height = 176
-        Top = 88
-        Width = 448
-        TabOrder = 1
-        ColWidths = (
-          28
-          104
-          98
-          64
-          120
-        )
-        Cells = (
-          4
-          1
-          0
-          'Nome da Coluna'
-          2
-          0
-          'Tipo de Variável'
-          3
-          0
-          'Tamanho'
-          4
-          0
-          'Não Pode Ser Nulo'
-        )
+        ParentFont = False
       end
       object btnGerarScript: TButton
         Left = 960
@@ -117,7 +95,7 @@ object frmInstaladorSistema: TfrmInstaladorSistema
         Width = 147
         Caption = 'Gerar Script'
         OnClick = btnGerarScriptClick
-        TabOrder = 2
+        TabOrder = 1
       end
       object btnGerarScript1: TButton
         Left = 962
@@ -126,7 +104,132 @@ object frmInstaladorSistema: TfrmInstaladorSistema
         Width = 147
         Caption = 'Gerar arquivo txt'
         OnClick = btnGerarScriptClick
+        TabOrder = 2
+      end
+      object Label7: TLabel
+        Left = 208
+        Height = 15
+        Top = 8
+        Width = 210
+        Caption = 'Quantidade de Campos a serem criados'
+        ParentColor = False
+      end
+      object edtquantidadecampos: TEdit
+        Left = 208
+        Height = 23
+        Top = 24
+        Width = 80
+        MaxLength = 3
+        NumbersOnly = True
         TabOrder = 3
+        Text = '1'
+      end
+      object Button1: TButton
+        Left = 296
+        Height = 25
+        Top = 24
+        Width = 123
+        Caption = 'Gerar Campos vazios'
+        OnClick = Button1Click
+        TabOrder = 4
+      end
+      object PageControl2: TPageControl
+        Left = 8
+        Height = 192
+        Top = 80
+        Width = 760
+        ActivePage = TabSheet2
+        TabIndex = 0
+        TabOrder = 5
+        object TabSheet2: TTabSheet
+          Caption = 'Campos da Tabela'
+          ClientHeight = 164
+          ClientWidth = 752
+          object lblCampo01: TLabel
+            Left = 8
+            Height = 15
+            Top = 8
+            Width = 92
+            Caption = 'Nome do Campo'
+            ParentColor = False
+          end
+          object edtcampo01: TEdit
+            Left = 8
+            Height = 23
+            Top = 24
+            Width = 192
+            CharCase = ecLowerCase
+            MaxLength = 20
+            TabOrder = 0
+          end
+          object lblVariavel01: TLabel
+            Left = 216
+            Height = 15
+            Top = 8
+            Width = 82
+            Caption = 'Tipo de Variável'
+            ParentColor = False
+          end
+          object cmbVariavel01: TComboBox
+            Left = 216
+            Height = 23
+            Top = 24
+            Width = 176
+            ItemHeight = 15
+            Items.Strings = (
+              'VARCHAR'
+              'INT '
+              'DECIMAL'
+              'BLOB'
+              'LONGTEXT'
+              'DATE '
+              'TIMESTAMP'
+            )
+            TabOrder = 1
+          end
+          object lblTamanho01: TLabel
+            Left = 408
+            Height = 15
+            Top = 8
+            Width = 49
+            Caption = 'Tamanho'
+            ParentColor = False
+          end
+          object edttamanho01: TEdit
+            Left = 408
+            Height = 23
+            Top = 23
+            Width = 80
+            MaxLength = 3
+            NumbersOnly = True
+            TabOrder = 2
+          end
+          object lblDecimal01: TLabel
+            Left = 504
+            Height = 15
+            Top = 8
+            Width = 43
+            Caption = 'Decimal'
+            ParentColor = False
+          end
+          object edtDecimal01: TEdit
+            Left = 504
+            Height = 23
+            Top = 24
+            Width = 80
+            MaxLength = 2
+            NumbersOnly = True
+            TabOrder = 3
+          end
+          object chkNulo01: TCheckBox
+            Left = 600
+            Height = 19
+            Top = 27
+            Width = 46
+            Caption = 'Nulo'
+            TabOrder = 4
+          end
+        end
       end
     end
   end

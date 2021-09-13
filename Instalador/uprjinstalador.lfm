@@ -273,6 +273,22 @@ object frmInstaladorSistema: TfrmInstaladorSistema
           end
         end
       end
+      object Edit1: TEdit
+        Left = 776
+        Height = 23
+        Top = 104
+        Width = 120
+        NumbersOnly = True
+        TabOrder = 6
+        Text = '1'
+      end
+      object Memo1: TMemo
+        Left = 776
+        Height = 378
+        Top = 136
+        Width = 120
+        TabOrder = 7
+      end
     end
     object TabSheet3: TTabSheet
       Caption = 'Script de Geração de Tabelas'

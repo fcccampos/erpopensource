@@ -21,6 +21,7 @@ type
     cmbTabela1: TComboBox;
     cmbVariavel01: TComboBox;
     cmbTabela: TComboBox;
+	 Edit1: TEdit;
     edtcampo01: TEdit;
     edtDecimal01: TEdit;
     edtNomeTabela: TEdit;
@@ -37,6 +38,7 @@ type
     lblVariavel01: TLabel;
     ListBox1: TListBox;
     ListBox2: TListBox;
+	 Memo1: TMemo;
     memoFirebird: TMemo;
     memoMySQL: TMemo;
     memoSQLite: TMemo;
@@ -88,14 +90,16 @@ end;
 procedure TfrmInstaladorSistema.Button1Click(Sender: TObject);
 var
   EditCampoTempoReal : TEdit;
-  intAlturaTop, I : Integer;
+  intAlturaTop, I, ContadorCampo : Integer;
   strNomeCampo : String;
 begin
+  //Tenho que guardar a altura também igual fiz com o Nome Do Campo
   intAlturaTop := edtCampo01.top + 26;
-  I :=0;
-  //Como pegar o nome do último campo??
-
+  I := 0;
+  ContadorCampo := StrToInt(edit1.Text);
   While I < StrToInt(edtquantidadecampos.Text) Do Begin
+     ShowMessage('Inicialização do I: ' + IntToStr(i) + 'Inicialização do Quantidade de Campos: ' + edtquantidadecampos.Text);
+     strNomeCampo := 'edtCampo' + IntToStr(ContadorCampo);
      // Gerando campos em tempo de execução
      EditCampoTempoReal := TEdit.Create(nil);
      EditCampoTempoReal.Parent := tabCampoDaTabela;
@@ -103,14 +107,18 @@ begin
      EditCampoTempoReal.Width := 192;
      EditCampoTempoReal.Top := intAlturaTop;
      EditCampoTempoReal.Left := 8;
-     EditCampoTempoReal.Name := 'edtCampo02';
+     EditCampoTempoReal.Name := strNomeCampo;
      EditCampoTempoReal.Caption := '';
      EditCampoTempoReal.CharCase := ecLowerCase;
      EditCampoTempoReal.MaxLength := 20;
      EditCampoTempoReal.TabOrder := 3;
      I := I + 1;
+     ContadorCampo := ContadorCampo + 1;
      intAlturaTop := intAlturaTop + 26;
+     Memo1.Lines.Add(strNomeCampo);
   End;
+  edit1.Text := IntToStr(ContadorCampo);
+
 
 end;
 

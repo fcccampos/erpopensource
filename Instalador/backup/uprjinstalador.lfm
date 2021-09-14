@@ -112,89 +112,102 @@ object frmInstaladorSistema: TfrmInstaladorSistema
           Caption = 'Campos da Tabela'
           ClientHeight = 404
           ClientWidth = 752
-          object lblCampo01: TLabel
-            Left = 8
-            Height = 15
-            Top = 8
-            Width = 92
-            Caption = 'Nome do Campo'
-            ParentColor = False
-          end
-          object edtcampo01: TEdit
-            Left = 8
-            Height = 23
-            Top = 24
-            Width = 192
-            CharCase = ecLowerCase
-            MaxLength = 20
+          object ScrollBox1: TScrollBox
+            Left = 0
+            Height = 404
+            Top = 0
+            Width = 752
+            HorzScrollBar.Page = 646
+            VertScrollBar.Page = 47
+            Align = alClient
+            BorderStyle = bsNone
+            ClientHeight = 404
+            ClientWidth = 752
             TabOrder = 0
-          end
-          object lblVariavel01: TLabel
-            Left = 216
-            Height = 15
-            Top = 8
-            Width = 82
-            Caption = 'Tipo de Variável'
-            ParentColor = False
-          end
-          object cmbVariavel01: TComboBox
-            Left = 216
-            Height = 23
-            Top = 24
-            Width = 176
-            ItemHeight = 15
-            Items.Strings = (
-              'VARCHAR'
-              'INT '
-              'DECIMAL'
-              'BLOB'
-              'LONGTEXT'
-              'DATE '
-              'TIMESTAMP'
-            )
-            TabOrder = 1
-          end
-          object lblTamanho01: TLabel
-            Left = 408
-            Height = 15
-            Top = 8
-            Width = 49
-            Caption = 'Tamanho'
-            ParentColor = False
-          end
-          object edttamanho01: TEdit
-            Left = 408
-            Height = 23
-            Top = 23
-            Width = 80
-            MaxLength = 3
-            NumbersOnly = True
-            TabOrder = 2
-          end
-          object lblDecimal01: TLabel
-            Left = 504
-            Height = 15
-            Top = 8
-            Width = 43
-            Caption = 'Decimal'
-            ParentColor = False
-          end
-          object edtDecimal01: TEdit
-            Left = 504
-            Height = 23
-            Top = 24
-            Width = 80
-            MaxLength = 2
-            NumbersOnly = True
-            TabOrder = 3
-          end
-          object chkNulo01: TCheckBox
-            Left = 600
-            Height = 19
-            Top = 27
-            Width = 46
-            Caption = 'Nulo'
-            TabOrder = 4
+            object lblCampo01: TLabel
+              Left = 8
+              Height = 15
+              Top = 8
+              Width = 92
+              Caption = 'Nome do Campo'
+              ParentColor = False
+            end
+            object edtcampo01: TEdit
+              Left = 8
+              Height = 23
+              Top = 24
+              Width = 192
+              CharCase = ecLowerCase
+              MaxLength = 20
+              TabOrder = 0
+            end
+            object lblVariavel01: TLabel
+              Left = 216
+              Height = 15
+              Top = 8
+              Width = 82
+              Caption = 'Tipo de Variável'
+              ParentColor = False
+            end
+            object cmbVariavel01: TComboBox
+              Left = 216
+              Height = 23
+              Top = 24
+              Width = 176
+              ItemHeight = 15
+              Items.Strings = (
+                'VARCHAR'
+                'INT '
+                'DECIMAL'
+                'BLOB'
+                'LONGTEXT'
+                'DATE '
+                'TIMESTAMP'
+              )
+              TabOrder = 1
+            end
+            object lblTamanho01: TLabel
+              Left = 408
+              Height = 15
+              Top = 8
+              Width = 49
+              Caption = 'Tamanho'
+              ParentColor = False
+            end
+            object edttamanho01: TEdit
+              Left = 408
+              Height = 23
+              Top = 23
+              Width = 80
+              MaxLength = 3
+              NumbersOnly = True
+              TabOrder = 2
+            end
+            object lblDecimal01: TLabel
+              Left = 504
+              Height = 15
+              Top = 8
+              Width = 43
+              Caption = 'Decimal'
+              ParentColor = False
+            end
+            object edtDecimal01: TEdit
+              Left = 504
+              Height = 23
+              Top = 24
+              Width = 80
+              MaxLength = 2
+              NumbersOnly = True
+              TabOrder = 3
+            end
+            object chkNulo01: TCheckBox
+              Left = 600
+              Height = 19
+              Top = 27
+              Width = 46
+              Caption = 'Nulo'
+              TabOrder = 4
+            end
           end
         end
         object TabSheet4: TTabSheet
@@ -273,21 +286,30 @@ object frmInstaladorSistema: TfrmInstaladorSistema
           end
         end
       end
-      object Edit1: TEdit
+      object edtContadorCampo: TEdit
         Left = 776
         Height = 23
         Top = 104
-        Width = 120
+        Width = 263
         NumbersOnly = True
         TabOrder = 6
         Text = '1'
       end
       object Memo1: TMemo
         Left = 776
-        Height = 378
-        Top = 136
-        Width = 120
+        Height = 354
+        Top = 160
+        Width = 263
         TabOrder = 7
+      end
+      object edtContadorAlturaTop: TEdit
+        Left = 776
+        Height = 23
+        Top = 132
+        Width = 263
+        NumbersOnly = True
+        TabOrder = 8
+        Text = '26'
       end
     end
     object TabSheet3: TTabSheet
@@ -337,5 +359,13 @@ object frmInstaladorSistema: TfrmInstaladorSistema
         TabOrder = 3
       end
     end
+  end
+  object Panel1: TPanel
+    Left = 347
+    Height = 50
+    Top = 70
+    Width = 170
+    Caption = 'Panel1'
+    TabOrder = 1
   end
 end

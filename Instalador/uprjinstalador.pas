@@ -17,25 +17,26 @@ type
     btnGerarScript1: TButton;
     Button1: TButton;
     Button2: TButton;
-    chkNulo01: TCheckBox;
+	 chkNulo01: TCheckBox;
     cmbTabela1: TComboBox;
-    cmbVariavel01: TComboBox;
     cmbTabela: TComboBox;
-	 Edit1: TEdit;
-    edtcampo01: TEdit;
-    edtDecimal01: TEdit;
+	 cmbVariavel01: TComboBox;
+	 edtcampo01: TEdit;
+	 edtContadorCampo: TEdit;
+	 edtContadorAlturaTop: TEdit;
+	 edtDecimal01: TEdit;
     edtNomeTabela: TEdit;
     edtquantidadecampos: TEdit;
-    edttamanho01: TEdit;
+	 edttamanho01: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label7: TLabel;
-    lblCampo01: TLabel;
-    lblDecimal01: TLabel;
-    lblTamanho01: TLabel;
-    lblVariavel01: TLabel;
+	 lblCampo01: TLabel;
+	 lblDecimal01: TLabel;
+	 lblTamanho01: TLabel;
+	 lblVariavel01: TLabel;
     ListBox1: TListBox;
     ListBox2: TListBox;
 	 Memo1: TMemo;
@@ -44,7 +45,9 @@ type
     memoSQLite: TMemo;
     PageControl1: TPageControl;
     PageControl2: TPageControl;
+	 Panel1: TPanel;
     RadioGroup1: TRadioGroup;
+	 ScrollBox1: TScrollBox;
     TabSheet1: TTabSheet;
     tabCampoDaTabela: TTabSheet;
     TabSheet3: TTabSheet;
@@ -94,15 +97,15 @@ var
   strNomeCampo : String;
 begin
   //Tenho que guardar a altura também igual fiz com o Nome Do Campo
-  intAlturaTop := edtCampo01.top + 26;
+  intAlturaTop := StrToInt(edtContadorAlturaTop.Text);
   I := 0;
-  ContadorCampo := StrToInt(edit1.Text);
+  ContadorCampo := StrToInt(edtContadorCampo.Text);
   While I < StrToInt(edtquantidadecampos.Text) Do Begin
-     ShowMessage('Inicialização do I: ' + IntToStr(i) + 'Inicialização do Quantidade de Campos: ' + edtquantidadecampos.Text);
+     //ShowMessage('Inicialização do I: ' + IntToStr(i) + 'Inicialização do Quantidade de Campos: ' + edtquantidadecampos.Text);
      strNomeCampo := 'edtCampo' + IntToStr(ContadorCampo);
-     // Gerando campos em tempo de execução
+     intAlturaTop := intAlturaTop + 26;
      EditCampoTempoReal := TEdit.Create(nil);
-     EditCampoTempoReal.Parent := tabCampoDaTabela;
+     EditCampoTempoReal.Parent := ScrollBox1;
      EditCampoTempoReal.Height := 23;
      EditCampoTempoReal.Width := 192;
      EditCampoTempoReal.Top := intAlturaTop;
@@ -114,12 +117,11 @@ begin
      EditCampoTempoReal.TabOrder := 3;
      I := I + 1;
      ContadorCampo := ContadorCampo + 1;
-     intAlturaTop := intAlturaTop + 26;
-     Memo1.Lines.Add(strNomeCampo);
+
+     Memo1.Lines.Add(strNomeCampo + ' Altura: ' + IntToStr(EditCampoTempoReal.Top));
   End;
-  edit1.Text := IntToStr(ContadorCampo);
-
-
+  edtContadorCampo.Text := IntToStr(ContadorCampo);
+  edtContadorAlturaTop.Text := IntTostr(intAlturaTop);
 end;
 
 procedure TfrmInstaladorSistema.PageControl1Change(Sender: TObject);

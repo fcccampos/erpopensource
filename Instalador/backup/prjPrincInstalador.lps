@@ -22,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPrjInstalador"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="95"/>
-        <CursorPos X="50" Y="119"/>
+        <TopLine Value="92"/>
+        <CursorPos X="8" Y="97"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>

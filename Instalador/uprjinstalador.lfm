@@ -9,8 +9,8 @@ object frmInstaladorSistema: TfrmInstaladorSistema
   LCLVersion = '2.0.12.0'
   object PageControl1: TPageControl
     Left = 0
-    Height = 552
-    Top = 192
+    Height = 560
+    Top = 184
     Width = 1117
     ActivePage = TabSheet1
     Align = alBottom
@@ -19,7 +19,7 @@ object frmInstaladorSistema: TfrmInstaladorSistema
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Criação de Tabelas'
-      ClientHeight = 524
+      ClientHeight = 532
       ClientWidth = 1109
       object Label1: TLabel
         Left = 8
@@ -155,6 +155,7 @@ object frmInstaladorSistema: TfrmInstaladorSistema
               Top = 24
               Width = 176
               ItemHeight = 15
+              ItemIndex = 0
               Items.Strings = (
                 'VARCHAR'
                 'INT '
@@ -165,6 +166,7 @@ object frmInstaladorSistema: TfrmInstaladorSistema
                 'TIMESTAMP'
               )
               TabOrder = 1
+              Text = 'VARCHAR'
             end
             object lblTamanho01: TLabel
               Left = 408
@@ -177,7 +179,7 @@ object frmInstaladorSistema: TfrmInstaladorSistema
             object edttamanho01: TEdit
               Left = 408
               Height = 23
-              Top = 23
+              Top = 24
               Width = 80
               MaxLength = 3
               NumbersOnly = True
@@ -290,7 +292,7 @@ object frmInstaladorSistema: TfrmInstaladorSistema
         Left = 776
         Height = 23
         Top = 104
-        Width = 263
+        Width = 63
         NumbersOnly = True
         TabOrder = 6
         Text = '1'
@@ -299,17 +301,26 @@ object frmInstaladorSistema: TfrmInstaladorSistema
         Left = 776
         Height = 354
         Top = 160
-        Width = 263
+        Width = 64
         TabOrder = 7
       end
       object edtContadorAlturaTop: TEdit
         Left = 776
         Height = 23
         Top = 132
-        Width = 263
+        Width = 63
         NumbersOnly = True
         TabOrder = 8
         Text = '26'
+      end
+      object edtContadorCombo: TEdit
+        Left = 848
+        Height = 23
+        Top = 104
+        Width = 64
+        NumbersOnly = True
+        TabOrder = 9
+        Text = '1'
       end
     end
     object TabSheet3: TTabSheet
@@ -359,13 +370,5 @@ object frmInstaladorSistema: TfrmInstaladorSistema
         TabOrder = 3
       end
     end
-  end
-  object Panel1: TPanel
-    Left = 347
-    Height = 50
-    Top = 70
-    Width = 170
-    Caption = 'Panel1'
-    TabOrder = 1
   end
 end

@@ -21,6 +21,7 @@ type
     cmbTabela1: TComboBox;
     cmbTabela: TComboBox;
 	 cmbVariavel01: TComboBox;
+	 edtContadorCombo: TEdit;
 	 edtcampo01: TEdit;
 	 edtContadorCampo: TEdit;
 	 edtContadorAlturaTop: TEdit;
@@ -45,7 +46,6 @@ type
     memoSQLite: TMemo;
     PageControl1: TPageControl;
     PageControl2: TPageControl;
-	 Panel1: TPanel;
     RadioGroup1: TRadioGroup;
 	 ScrollBox1: TScrollBox;
     TabSheet1: TTabSheet;
@@ -93,18 +93,21 @@ end;
 procedure TfrmInstaladorSistema.Button1Click(Sender: TObject);
 var
   EditCampoTempoReal : TEdit;
+  cmbVariavelTempoReal : TComboBox;
   intAlturaTop, I, ContadorCampo : Integer;
   strNomeCampo : String;
 begin
-  //Tenho que guardar a altura também igual fiz com o Nome Do Campo
+  //============================================================================
+
   intAlturaTop := StrToInt(edtContadorAlturaTop.Text);
   I := 0;
   ContadorCampo := StrToInt(edtContadorCampo.Text);
   While I < StrToInt(edtquantidadecampos.Text) Do Begin
      //ShowMessage('Inicialização do I: ' + IntToStr(i) + 'Inicialização do Quantidade de Campos: ' + edtquantidadecampos.Text);
+
      strNomeCampo := 'edtCampo' + IntToStr(ContadorCampo);
      intAlturaTop := intAlturaTop + 26;
-     // Gerando campos em tempo de execução
+     //=====Criação do nome do campo em tempo real
      EditCampoTempoReal := TEdit.Create(nil);
      EditCampoTempoReal.Parent := ScrollBox1;
      EditCampoTempoReal.Height := 23;
@@ -116,13 +119,39 @@ begin
      EditCampoTempoReal.CharCase := ecLowerCase;
      EditCampoTempoReal.MaxLength := 20;
      EditCampoTempoReal.TabOrder := 3;
+     Memo1.Lines.Add(strNomeCampo + ' Altura: ' + IntToStr(EditCampoTempoReal.Top));
+     //=====Criação do Tipo de variável em tempo real
+     strNomeCampo := 'cmbVariavel' + IntToStr(ContadorCampo);
+     cmbVariavelTempoReal            := TComboBox.Create(nil);
+     cmbVariavelTempoReal.Parent     := ScrollBox1;
+     cmbVariavelTempoReal.Left       := 216;
+     cmbVariavelTempoReal.Height     := 23;
+     cmbVariavelTempoReal.Top        := intAlturaTop;
+     cmbVariavelTempoReal.Width      := 176;
+     cmbVariavelTempoReal.Name       := strNomeCampo;
+     cmbVariavelTempoReal.Caption    := '';
+     cmbVariavelTempoReal.ItemHeight := 15;
+     cmbVariavelTempoReal.Items.Add('VARCHAR');
+     cmbVariavelTempoReal.Items.Add('INT');
+     cmbVariavelTempoReal.Items.Add('DECIMAL');
+     cmbVariavelTempoReal.Items.Add('BLOB');
+     cmbVariavelTempoReal.Items.Add('LONGTEXT');
+     cmbVariavelTempoReal.Items.Add('DATE');
+     cmbVariavelTempoReal.Items.Add('TIMESTAMP');
+     cmbVariavelTempoReal.ItemIndex  := 0;
+     Memo1.Lines.Add(strNomeCampo + ' Altura: ' + IntToStr(cmbVariavelTempoReal.Top));
      I := I + 1;
      ContadorCampo := ContadorCampo + 1;
 
-     Memo1.Lines.Add(strNomeCampo + ' Altura: ' + IntToStr(EditCampoTempoReal.Top));
+
+
   End;
   edtContadorCampo.Text := IntToStr(ContadorCampo);
   edtContadorAlturaTop.Text := IntTostr(intAlturaTop);
+
+
+
+
 end;
 
 procedure TfrmInstaladorSistema.PageControl1Change(Sender: TObject);
